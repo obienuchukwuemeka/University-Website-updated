@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website</title>
+    <!-- Font Awesome 6 (Latest) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hero Section with Header -->
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="Logo">
+                </div>
+                <div class="logo-name">
+                    <a href="index.html">StanEdu</a>
+                </div>
+            </div>
+<!-- nav -->
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="course.html">Courses</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+<!-- js for menu icon -->
+            <i class="fa-solid fa-bars menu-icon" onclick="showMenu()"></i>
+        </header>
+
+        <section class="hero-text">
+            <h1>World's Biggest University</h1>
+            <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS,<br> JavaScript and you are good to go</p>
+            <a href="#" class="btn-visit">Visit to learn more</a>
+        </section>
+    </div>
+
+    <!-- Courses Section -->
+
+    <!-- Campus Section -->
+    <section class="campus">
+        <h1>Our Global Campus</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. fugit ex mollitia illo rem fugiat voluptatum eaque. Veniam</p>
+        
+        <div class="campus-col">
+            <div class="campus-img">
+                <img src="assets/uni 1.png" alt="London Campus">
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+            
+            <div class="campus-img">
+                <img src="assets/un 2.png" alt="New York Campus">
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            
+            <div class="campus-img">
+                <img src="assets/Gemini_Generated_Image_yzpk4yyzpk4yyzpk.png" alt="Washington Campus">
+                <div class="layer">
+                    <h3>WASHINGTON</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="facility">
+    <h1 class="facility-header">Our Facilities</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cumque laborum, magni nemo aspernatur architecto eum facilis totam</p>
+    
+    <div class="facility-row">
+        <!-- Facility Item 1 -->
+        <div class="facility-item">
+            <img src="assets/library.png" alt="Library">
+            <h3>World Class Library</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel numquam voluptatibus nisi eius assumenda, vitae itaque fuga accusamus eveniet consequuntur totam eligendi non!</p>
+        </div>
+
+        <!-- Facility Item 2 -->
+        <div class="facility-item">
+            <img src="assets/basketball court.png" alt="Sport Center">
+            <h3>Largest Sport Center</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel numquam voluptatibus nisi eius assumenda, vitae itaque fuga accusamus eveniet consequuntur totam eligendi non!</p>
+        </div>
+
+        <!-- Facility Item 3 -->
+        <div class="facility-item">
+            <img src="assets/cafatiria.png" alt="Cafeteria">
+            <h3>Tasty and Healthy Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel numquam voluptatibus nisi eius assumenda, vitae itaque fuga accusamus eveniet consequuntur totam eligendi non!</p>
+        </div>
+    </div>
+            </section>
+
+        
+    <!--Review-->
+
+   <!-- Review Section -->
+<section class="review">
+    <h1>What Our Students Say</h1>
+    <p>Lhorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, sed! Distinctio fac</p>
+    
+    <div class="review-row">
+        <!-- Review Card 1 -->
+        <div class="review-item">
+            <img src="assets/profile pic 2.png" alt="Josh Evermore" class="profile-img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloremque at hic voluptatibus, dolor ipsa sint laborum placeat vitae possimus quidem praesentium quisquam unde impedit fuga officiis repellat molestiae. Placeat.</p>
+            <h3>Josh Evermore</h3>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="review-item">
+            <img src="assets/porfile pic 1.png" alt="Adelake Tosin" class="profile-img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloremque at hic voluptatibus, dolor ipsa sint laborum placeat vitae possimus quidem praesentium quisquam unde impedit fuga officiis repellat molestiae. Placeat.</p>
+            <h3>Adelake Tosin</h3>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta">
+    <h3>Enroll For Our Various Online Courses<br>Anywhere From The World</h3>
+    <a href="contact.html" class="cta-btn">CONTACT US</a>
+</section>
+
+<section class="about">
+    <h3>About Us</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. quam. Molestiae deleniti dolor amet quisquam architecto officia hic ratione aperiam illum! Ullam, laboriosam eum?</p>
+    
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+</section>
+
+</section>
+<script src="Js/app.js"></script>
+</body>
+</html>
