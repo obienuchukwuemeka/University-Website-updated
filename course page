@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website - About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Hero/Sub Header Section -->
+    <div class="sub-header">
+        <header>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="Logo">
+                </div>
+                <div class="logo-name">
+                    <a href="index.html">StanEdu</a>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="course.html">Courses</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <i class="fa-solid fa-bars menu-icon" onclick="showMenu()"></i>
+        </header>
+
+        <div class="sub-header-text">
+            <h1>Our courses</h1>
+        </div>
+    </div>
+
+<section class="course-container">
+            <div class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nesciunt quo illum impedit provident? Alias doloribus voluptates assumenda minus illo placeat repellat necessitatibus!</p>
+
+<div class="course-col">
+    <h3>Intermediate</h3>
+    <p>Our one-year JUPEB Pre-Degree programme gives you direct entry into 200-level across all faculties.</p>
+    <a href="predegree.html" class="red-btn" style="margin-top: 15px; display: inline-block;">View Programme</a>
+</div>
+
+<div class="course-col">
+    <h3>Degree</h3>
+    <p>Explore our 12 faculties offering undergraduate degree programmes...</p>
+    <a href="degree.html" class="red-btn" style="margin-top:15px; display:inline-block;">View Faculties</a>
+</div>
+
+<div class="course-col">
+    <h3>Post Graduation</h3>
+    <p>Advance your career with our PGD, Masters, M.Phil and PhD programmes offered across all major faculties.</p>
+    <a href="postdegree.html" class="red-btn" style="margin-top: 15px; display: inline-block;">View Programmes</a>
+</div>
+        </div>
+    </div>
+
+</section>
+    
+    <section class="about-us">
+
+        <div class="about-info">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti dolor amet quisquam architecto officia hic ratione aperiam illum! Ullam, laboriosam eum?</p>
+
+
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('show');
+        }
+    </script>
+
+    <script src="Js/app.js"></script>
+</body>
+</html>
