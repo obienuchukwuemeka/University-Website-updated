@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - StanEdu University</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         SUB HEADER SECTION (Page Title Banner)
+         ============================================ -->
+    <div class="sub-header">
+        <!-- Navigation -->
+        <header>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="StanEdu Logo">
+                </div>
+                <div class="logo-name">
+                    <a href="index.html">StanEdu</a>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="course.html">Courses</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Icon -->
+            <i class="fa-solid fa-bars menu-icon" onclick="showMenu()"></i>
+        </header>
+
+        <!-- Page Title -->
+        <div class="sub-header-text">
+            <h1>Our Certificate & Online Programs For 2021</h1>
+        </div>
+    </div>
+
+    <!-- ============================================
+         BLOG CONTENT SECTION
+         ============================================ -->
+    <section class="blog-content">
+        <div class="row">
+            
+            <!-- Left Column: Main Blog Post -->
+            <div class="blog-left">
+                <!-- Featured Image -->
+                <img src="assets/gradute student.png" alt="Graduate Student">
+                
+                <!-- Post Title -->
+                <h2>Our Certificate & Online Programs for 2021</h2>
+
+                <!-- Post Content -->
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam necessitatibus veritatis laborum animi ullam ab sint eos mollitia doloremque quam adipisci asperiores assumenda, corrupti tempore minus dolores magni sunt voluptatum.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta dolore pariatur! Earum accusantium harum voluptas ut quibusdam quas tenetur necessitatibus, ipsa sint provident non voluptates, eveniet dolores aspernatur repellat!</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ipsum, labore saepe quisquam quidem voluptas voluptatem veritatis, sint quia vero commodi iure impedit inventore sunt recusandae, ducimus delectus rerum itaque.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum consectetur porro similique, consequatur voluptatibus ducimus possimus. Ratione iusto repellat animi nam saepe in at sint vitae quidem, deleniti fuga neque.</p>
+
+                <!-- Comment Section -->
+                <div class="comment-box">
+                    <h3>Leave a Comment</h3>
+                    <form class="comment-form">
+                        <input type="text" name="name" placeholder="Enter Name" required>
+                        <input type="email" name="email" placeholder="Enter Email" required>
+                        <textarea name="comment" rows="5" placeholder="Your comment" required></textarea>
+                        <button type="submit" class="red-btn">POST COMMENT</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <div class="blog-right">
+                <h3>Post Categories</h3>
+                
+                <!-- Categories List -->
+                <div class="categories-list">
+                    <div class="category-item">
+                        <span>Business Analytics</span>
+                        <span class="count">21</span>
+                    </div>
+                    
+                    <div class="category-item">
+                        <span>Data Science</span>
+                        <span class="count">28</span>
+                    </div>
+
+                    <div class="category-item">
+                        <span>Machine Learning</span>
+                        <span class="count">28</span>
+                    </div>
+
+                    <div class="category-item">
+                        <span>Computer Science</span>
+                        <span class="count">34</span>
+                    </div>
+
+                    <div class="category-item">
+                        <span>AutoCAD</span>
+                        <span class="count">42</span>
+                    </div>  
+                    
+                    <div class="category-item">
+                        <span>Journalism</span>
+                        <span class="count">22</span>
+                    </div>
+                
+                    <div class="category-item">
+                        <span>Commerce</span>
+                        <span class="count">30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER SECTION
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti dolor amet quisquam architecto officia hic ratione aperiam illum!</p>
+
+            <!-- Social Media Links -->
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <p class="copyright">© 2024 StanEdu University. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+     <script src="Js/app.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        function showMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('show');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.nav-links');
+            const menuIcon = document.querySelector('.menu-icon');
+            
+            if (!nav.contains(event.target) && !menuIcon.contains(event.target)) {
+                nav.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
