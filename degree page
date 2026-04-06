@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Programmes - StanEdu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/degree.css">
+</head>
+<body>
+
+    <!-- Sub Header -->
+    <div class="sub-header">
+        <header>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="Logo">
+                </div>
+                <div class="logo-name">
+                    <a href="index.html">StanEdu</a>
+                </div>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="course.html" class="active">Courses</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <i class="fa-solid fa-bars menu-icon" onclick="showMenu()"></i>
+        </header>
+
+        <div class="sub-header-text">
+            <h1>Degree Programmes</h1>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp;›&nbsp;
+        <a href="course.html">Courses</a> &nbsp;›&nbsp;
+        Degree Programmes
+    </div>
+
+    <!-- Intro -->
+    <div class="degree-intro">
+        <h1>Explore Our <span>12 Faculties</span></h1>
+        <p>Our undergraduate degree programmes span science, technology, humanities, law, health, and business. Each faculty is staffed by world-class academics committed to producing graduates ready for the global stage.</p>
+
+        <div class="degree-stats">
+            <div class="stat-item">
+                <h3>12</h3>
+                <p>Faculties</p>
+            </div>
+            <div class="stat-item">
+                <h3>60+</h3>
+                <p>Departments</p>
+            </div>
+            <div class="stat-item">
+                <h3>4–6 yrs</h3>
+                <p>Programme Duration</p>
+            </div>
+            <div class="stat-item">
+                <h3>5 Credits</h3>
+                <p>Minimum O'Level Entry</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="faculty-filter">
+        <button class="filter-btn active" onclick="filterFaculties('all', this)">All Faculties</button>
+        <button class="filter-btn" onclick="filterFaculties('health', this)">Health Sciences</button>
+        <button class="filter-btn" onclick="filterFaculties('science', this)">Pure & Applied Sciences</button>
+        <button class="filter-btn" onclick="filterFaculties('humanities', this)">Humanities</button>
+        <button class="filter-btn" onclick="filterFaculties('management', this)">Management</button>
+        <button class="filter-btn" onclick="filterFaculties('engineering', this)">Engineering</button>
+    </div>
+
+    <!-- Faculty Cards -->
+    <div class="faculty-section">
+        <h2>All Faculties &amp; Departments</h2>
+
+        <div class="faculty-grid" id="facultyGrid">
+
+            <!-- 1. Basic Medical Sciences -->
+            <div class="faculty-card medical" data-group="health">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Faculty of Basic Medical Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Biochemistry</li>
+                        <li>Anatomy</li>
+                        <li>Physiology</li>
+                        <li>Medical Laboratory Science</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 2. Clinical Sciences -->
+            <div class="faculty-card medical" data-group="health">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Faculty of Clinical Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Medicine & Surgery</li>
+                        <li>Paediatrics</li>
+                        <li>Obstetrics & Gynaecology</li>
+                        <li>Surgery</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 3. Pharmacy -->
+            <div class="faculty-card pharmacy" data-group="health">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-pills"></i></div>
+                    <h3>Faculty of Pharmacy</h3>
+                    <ul class="dept-list">
+                        <li>Pharmaceutical Chemistry</li>
+                        <li>Pharmacology & Toxicology</li>
+                        <li>Clinical Pharmacy</li>
+                        <li>Pharmacy Practice</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 4. Nursing -->
+            <div class="faculty-card nursing" data-group="health">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>Faculty of Nursing Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Community Health Nursing</li>
+                        <li>Medical-Surgical Nursing</li>
+                        <li>Midwifery</li>
+                        <li>Paediatric Nursing</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 5. Science -->
+            <div class="faculty-card science" data-group="science">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Faculty of Science</h3>
+                    <ul class="dept-list">
+                        <li>Biological Sciences</li>
+                        <li>Microbiology</li>
+                        <li>Pure & Applied Chemistry</li>
+                        <li>Mathematics / Computer Science</li>
+                        <li>Geology</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 6. Agriculture -->
+            <div class="faculty-card agriculture" data-group="science">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Faculty of Agriculture</h3>
+                    <ul class="dept-list">
+                        <li>Agricultural Economics</li>
+                        <li>Crop & Soil Science</li>
+                        <li>Animal Science</li>
+                        <li>Fisheries & Aquatic Studies</li>
+                        <li>Extension & Rural Sociology</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 7. Engineering -->
+            <div class="faculty-card engineering" data-group="engineering">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-gear"></i></div>
+                    <h3>Faculty of Engineering</h3>
+                    <ul class="dept-list">
+                        <li>Electrical / Electronics Engineering</li>
+                        <li>Civil Engineering / Hydrology</li>
+                        <li>Mechanical / Marine Engineering</li>
+                        <li>Chemical Engineering</li>
+                        <li>Petroleum Engineering</li>
+                        <li>Agricultural / Environmental Engineering</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 8. Management Sciences -->
+            <div class="faculty-card management" data-group="management">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Faculty of Management Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Accounting</li>
+                        <li>Banking & Finance</li>
+                        <li>Business Administration</li>
+                        <li>Marketing</li>
+                        <li>Insurance</li>
+                        <li>Office Information Management</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 9. Social Sciences -->
+            <div class="faculty-card social" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Faculty of Social Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Economics</li>
+                        <li>Political Science</li>
+                        <li>Sociology</li>
+                        <li>Mass Communication</li>
+                        <li>Geography / Environmental Management</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 10. Arts -->
+            <div class="faculty-card arts" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+                    <h3>Faculty of Arts</h3>
+                    <ul class="dept-list">
+                        <li>English & Literary Studies</li>
+                        <li>History & Diplomacy</li>
+                        <li>Theatre Arts</li>
+                        <li>Philosophy</li>
+                        <li>Religious Studies</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 11. Law -->
+            <div class="faculty-card law" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Faculty of Law</h3>
+                    <ul class="dept-list">
+                        <li>Private & Property Law</li>
+                        <li>Public & International Law</li>
+                        <li>Commercial & Industrial Law</li>
+                        <li>Islamic Law</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 12. Environmental Sciences -->
+            <div class="faculty-card environmental" data-group="engineering">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Faculty of Environmental Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Architecture</li>
+                        <li>Building Technology</li>
+                        <li>Quantity Surveying</li>
+                        <li>Urban & Regional Planning</li>
+                        <li>Fine & Applied Arts</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div><!-- /faculty-grid -->
+    </div><!-- /faculty-section -->
+
+    <!-- Bottom CTA -->
+    <div class="degree-cta">
+        <h3>Ready to Begin Your Degree Journey?</h3>
+        <p>Applications are open for the current academic session. Secure your place in one of our world-class degree programmes today.</p>
+        <a href="#" class="cta-btn">Apply for Admission</a>
+        <a href="contact.html" class="cta-btn outline">Contact Admissions</a>
+    </div> 
+    </body>
+</html>
