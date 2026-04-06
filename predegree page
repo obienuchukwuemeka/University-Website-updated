@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Degree Programme - StanEdu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/predegree.css">
+    src
+</head>
+<body>
+
+    <!-- Sub Header -->
+    <div class="sub-header">
+        <header>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="Logo">
+                </div>
+                <div class="logo-name">
+                    <a href="index.html">StanEdu</a>
+                </div>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="course.html" class="active">Courses</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <i class="fa-solid fa-bars menu-icon" onclick="showMenu()"></i>
+        </header>
+
+        <div class="sub-header-text">
+            <h1>Pre-Degree Programme</h1>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp;›&nbsp;
+        <a href="course.html">Courses</a> &nbsp;›&nbsp;
+        Pre-Degree Programme
+    </div>
+
+    <!-- Intro -->
+    <div class="predegree-intro">
+        <h1>Your Gateway to <span>Degree Admission</span></h1>
+        <p>The Pre-Degree (JUPEB) programme is a one-year foundation course that prepares students for Direct Entry admission into 200-level across all faculties. It is equivalent to the A-Level GCE, IJMB, and the Old Higher School Certificate.</p>
+
+        <div class="predegree-stats">
+            <div class="stat-item">
+                <h3>1 Year</h3>
+                <p>Programme Duration</p>
+            </div>
+            <div class="stat-item">
+                <h3>10</h3>
+                <p>Faculties Available</p>
+            </div>
+            <div class="stat-item">
+                <h3>200 Level</h3>
+                <p>Direct Entry Access</p>
+            </div>
+            <div class="stat-item">
+                <h3>₦17,500</h3>
+                <p>Application Fee</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Banner -->
+    <div class="predegree-banner">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>
+            <strong>JUPEB Certification:</strong> Upon completion, students receive a Joint Universities Preliminary Examinations Board (JUPEB) Certificate which is accepted for Direct Entry admission at StanEdu and other JUPEB-affiliated universities in Nigeria and abroad. Candidates must also satisfy individual departmental admission requirements.
+        </p>
+    </div>
+
+    <!-- How to Apply Steps -->
+    <div class="how-to-apply">
+        <h2>How to Apply</h2>
+        <p>Follow these simple steps to secure your Pre-Degree admission</p>
+
+        <div class="steps-row">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h4>Buy EPin</h4>
+                <p>Purchase your application EPin (₦17,500) online using your bank debit card</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h4>Fill Form</h4>
+                <p>Complete the online application form using your EPin code</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h4>Submit Documents</h4>
+                <p>Submit your O'Level result, birth certificate, and two reference letters</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h4>Check Admission</h4>
+                <p>Check your admission status on the portal using your form number</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">5</div>
+                <h4>Pay School Fees</h4>
+                <p>Accept your offer and pay school fees to complete clearance</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="faculty-filter">
+        <button class="filter-btn active" onclick="filterFaculties('all', this)">All Faculties</button>
+        <button class="filter-btn" onclick="filterFaculties('health', this)">Health Sciences</button>
+        <button class="filter-btn" onclick="filterFaculties('science', this)">Sciences</button>
+        <button class="filter-btn" onclick="filterFaculties('humanities', this)">Humanities</button>
+        <button class="filter-btn" onclick="filterFaculties('management', this)">Management</button>
+        <button class="filter-btn" onclick="filterFaculties('engineering', this)">Engineering</button>
+    </div>
+
+    <!-- Faculty Cards -->
+    <div class="faculty-section">
+        <h2>Available Faculties &amp; Combinations</h2>
+
+        <div class="faculty-grid" id="facultyGrid">
+
+            <!-- 1. Agriculture -->
+            <div class="faculty-card agriculture" data-group="science">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Faculty of Agriculture</h3>
+                    <ul class="dept-list">
+                        <li>Economics, Extension & Rural Sociology</li>
+                        <li>Crop and Soil Science</li>
+                        <li>Fisheries and Aquatic Studies</li>
+                        <li>Animal Science</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 2. Arts -->
+            <div class="faculty-card arts" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+                    <h3>Faculty of Arts</h3>
+                    <ul class="dept-list">
+                        <li>English and Literary Studies</li>
+                        <li>History and Diplomacy</li>
+                        <li>Theatre Arts</li>
+                        <li>Philosophy</li>
+                        <li>Religious Studies</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 3. Basic Medical Sciences -->
+            <div class="faculty-card medical" data-group="health">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Faculty of Basic Medical Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Biochemistry</li>
+                        <li>Medicine</li>
+                        <li>Medical Laboratory Science</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">3 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 4. Education -->
+            <div class="faculty-card education" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Faculty of Education</h3>
+                    <ul class="dept-list">
+                        <li>Arts Education</li>
+                        <li>Science Education</li>
+                        <li>Social Science Education</li>
+                        <li>Educational Foundations</li>
+                        <li>Vocational / Industrial Technology</li>
+                        <li>Library and Information Science</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 5. Engineering -->
+            <div class="faculty-card engineering" data-group="engineering">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-gear"></i></div>
+                    <h3>Faculty of Engineering</h3>
+                    <ul class="dept-list">
+                        <li>Agricultural / Environmental Engineering</li>
+                        <li>Chemical Engineering</li>
+                        <li>Civil Engineering / Hydrology</li>
+                        <li>Electrical / Electronics Engineering</li>
+                        <li>Mechanical / Marine Engineering</li>
+                        <li>Petroleum Engineering</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 6. Environmental Sciences -->
+            <div class="faculty-card environmental" data-group="engineering">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Faculty of Environmental Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Architecture</li>
+                        <li>Building</li>
+                        <li>Environmental Management</li>
+                        <li>Fine and Applied Arts</li>
+                        <li>Quantity Surveying</li>
+                        <li>Urban and Regional Planning</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 7. Law -->
+            <div class="faculty-card law" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Faculty of Law</h3>
+                    <ul class="dept-list">
+                        <li>Law</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">1 Department</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 8. Management Sciences -->
+            <div class="faculty-card management" data-group="management">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Faculty of Management Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Accountancy</li>
+                        <li>Banking & Finance</li>
+                        <li>Insurance</li>
+                        <li>Management</li>
+                        <li>Marketing</li>
+                        <li>Office Information Management</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 9. Science -->
+            <div class="faculty-card science" data-group="science">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Faculty of Science</h3>
+                    <ul class="dept-list">
+                        <li>Biological Science</li>
+                        <li>Microbiology</li>
+                        <li>Mathematics / Computer Science</li>
+                        <li>Geology</li>
+                        <li>Pure and Applied Chemistry</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 10. Social Sciences -->
+            <div class="faculty-card social" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Faculty of Social Sciences</h3>
+                    <ul class="dept-list">
+                        <li>Economics</li>
+                        <li>Geography / Environmental Management</li>
+                        <li>Political Science</li>
+                        <li>Sociology</li>
+                        <li>Mass Communication</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div><!-- /faculty-grid -->
+    </div><!-- /faculty-section -->
+
+    <!-- Admission Requirements -->
+    <div class="requirements">
+        <h2>Admission Requirements</h2>
+        <div class="req-grid">
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <h4>O'Level Result</h4>
+                <p>Minimum of 5 credit passes including English Language and Mathematics in not more than 2 sittings (WAEC, NECO, or NABTEB)</p>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-id-card"></i></div>
+                <h4>Identification Documents</h4>
+                <p>Valid Age Declaration or Birth Certificate plus an LGA Identification Letter confirming your state of origin</p>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                <h4>Reference Letters</h4>
+                <p>Two reference letters signed by two qualified referees (e.g. a teacher, pastor, imam, or community leader)</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="predegree-cta">
+        <h3>Start Your Academic Journey Today</h3>
+        <p>Applications are currently open. Purchase your EPin and complete your application before the closing date to secure your place.</p>
+        <a href="#" class="cta-btn">Buy Application EPin</a>
+        <a href="contact.html" class="cta-btn outline">Contact Admissions</a>
+    </div>
+
+<script src="Js/app.js"></script>
+</body>
+</html>
