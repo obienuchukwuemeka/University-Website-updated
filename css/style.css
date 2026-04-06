@@ -1,0 +1,2836 @@
+/* ============================================
+   STANEDU UNIVERSITY WEBSITE - MASTER STYLESHEET
+   Author: Your Name
+   Last Updated: December 2024
+   ============================================ */
+
+/* ============================================
+   TABLE OF CONTENTS:
+   1. Global Styles & Reset
+   2. Header & Navigation
+   3. Hero Section (Homepage)
+   4. Course Section
+   5. Campus Section
+   6. Facility Section
+   7. Review/Testimonial Section
+   8. CTA (Call to Action) Section
+   9. Footer/About Section
+   10. Sub-Header (Internal Pages)
+   11. About Page
+   12. Blog Page
+   13. Contact Page
+   14. RESPONSIVE MEDIA QUERIES (ALL AT BOTTOM)
+   ============================================ */
+
+/* ============================================
+   1. GLOBAL STYLES & RESET
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set base font for entire website */
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* ============================================
+   2. HEADER & NAVIGATION
+   ============================================ */
+
+/* Main header container - appears on all pages */
+header {
+    display: flex; /* Makes logo and nav sit side by side */
+    justify-content: space-between; /* Pushes logo left, nav right */
+    align-items: center; /* Vertically centers items */
+    padding: 20px 5%; /* Top/bottom 20px, left/right 5% */
+    width: 100%;
+    position: absolute; /* Overlays on hero image */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Stays above other content */
+}
+
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between image and text */
+}
+
+/* Logo image */
+.logo-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Maintains aspect ratio */
+}
+
+/* Logo text/link */
+.logo-name a {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none; /* Removes underline */
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+/* Individual navigation links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-bottom: 2px solid transparent; /* Hidden by default */
+    transition: 0.3s; /* Smooth animation */
+}
+
+/* Link hover effect */
+.nav-links a:hover,
+.nav-links a.active {
+    border-bottom: 2px solid white; /* Shows underline on hover */
+}
+
+/* Mobile menu icon - hidden by default, shows on mobile */
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ============================================
+   3. HERO SECTION (Homepage)
+   ============================================ */
+
+/* Hero background container with image overlay */
+/* Hero background container with image overlay */
+.container {
+background: linear-gradient(rgba(65, 105, 225, 0.3), rgba(65, 105, 225, 0.3)),
+            url("../assets/landing.png") center/cover no-repeat;
+min-height: 100vh;
+width: 100%;
+position: relative;
+margin-bottom: 50px;
+}
+/* Hero text content container */
+.hero-text {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    text-align: center;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    padding: 0 20px;
+    min-height: 100vh; /* Full screen height */
+}
+
+/* Main hero heading */
+.hero-text h1 {
+    color: white;
+    align-items: center;
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+/* Hero paragraph */
+.hero-text p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6; /* Space between lines for readability */
+}
+
+/* Hero call-to-action button */
+.btn-visit {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.btn-visit:hover {
+    background: rgba(255, 255, 255, 0.6); /* More opaque on hover */
+    transform: translateY(-3px); /* Lifts button slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   4. COURSE SECTION
+   ============================================ */
+
+/* Course section container */
+.course {
+    width: 80%; /* Takes 80% of screen width */
+    margin: 0 auto; /* Centers the section */
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Course section heading */
+.course h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Course section description */
+.course p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px; /* Limits text width for readability */
+    margin: 0 auto 50px; /* Centers and adds bottom margin */
+}
+
+/* Row container for course cards */
+.row {
+    display: flex;
+    justify-content: space-between; /* Spaces cards evenly */
+    gap: 30px; /* Space between cards */
+    flex-wrap: wrap; /* Cards wrap to next line if needed */
+}
+
+/* Individual course card */
+.course-col {
+    flex-basis: 31%; /* Each card takes 31% width (3 per row) */
+    /* flex-basis sets the initial size before flex-grow/shrink */
+    background: #fff3f3; /* Light pink background */
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+/* Course card heading */
+.course-col h3 {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* Course card description */
+.course-col p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Course card hover effect */
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+/* ============================================
+   5. CAMPUS SECTION
+   ============================================ */
+
+/* Campus section container */
+.campus {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Campus heading */
+.campus h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Campus description */
+.campus p {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Campus images row */
+.campus-col {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Individual campus image container */
+.campus-img {
+    flex-basis: 32%; /* Each image takes 32% width */
+    border-radius: 10px;
+    overflow: hidden; /* Hides overflow when image scales */
+    position: relative; /* Needed for absolute positioned layer */
+}
+
+/* Campus image */
+.campus-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fills container without distortion */
+    display: block;
+    transition: 0.5s;
+}
+
+/* Red overlay layer - hidden by default */
+.layer {
+    background: rgba(226, 0, 0, 0.7); /* Red with 70% opacity */
+    height: 100%;
+    width: 100%;
+    position: absolute; /* Overlays on image */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: 0.5s;
+}
+
+/* City name on overlay */
+.layer h3 {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Image zoom effect on hover */
+.campus-img:hover img {
+    transform: scale(1.1); /* Zooms in 10% */
+}
+
+/* Show overlay on hover */
+.campus-img:hover .layer {
+    opacity: 1; /* Makes overlay visible */
+}
+
+/* ============================================
+   6. FACILITY SECTION
+   ============================================ */
+
+/* Facility section container */
+.facility {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Facility heading */
+.facility-header {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Facility description */
+.facility p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+/* Facility cards container */
+.facility-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual facility card */
+.facility-item {
+    flex-basis: 48%; /* 2 items per row (48% each) */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+/* Facility card hover effect */
+.facility-item:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Lifts card up */
+}
+
+/* Facility image */
+.facility-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Facility heading */
+.facility-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Facility description */
+.facility-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ============================================
+   7. REVIEW/TESTIMONIAL SECTION
+   ============================================ */
+
+/* Review section container */
+.review {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Review heading */
+.review h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Review description */
+.review p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+/* Review cards container */
+.review-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual review card */
+.review-item {
+    flex-basis: 45%; /* 2 cards per row */
+    max-width: 500px;
+    background: #fff3f3;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+/* Review card hover effect */
+.review-item:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Profile image */
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Makes image circular */
+    margin-bottom: 20px;
+}
+
+/* Review text */
+.review-item p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Reviewer name */
+.review-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Star rating container */
+.stars {
+    color: #f4c150; /* Gold color for stars */
+    font-size: 18px;
+}
+
+/* Individual star spacing */
+.stars i {
+    margin-right: 3px;
+}
+
+/* ============================================
+   8. CTA (CALL TO ACTION) SECTION
+   ============================================ */
+
+/* CTA banner with background image */
+.cta {
+    width: 80%;
+    margin: 100px auto;
+    padding: 100px 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url(../assets/meeting.png) no-repeat center/cover;
+    /* Dark overlay makes text readable on image */
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* CTA heading */
+.cta h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* CTA button */
+.cta-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* CTA button hover effect */
+.cta-btn:hover {
+    background: white;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   9. FOOTER/ABOUT SECTION
+   ============================================ */
+
+/* Footer container */
+.about {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Footer heading */
+.about h3 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Footer description */
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Social icons container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Individual social icon */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes icon circular */
+    background: #333;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Social icon hover effect */
+.social-icons a:hover {
+    transform: translateY(-5px); /* Lifts icon */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual social media colors on hover */
+.social-icons a:nth-child(1):hover { background: #4267B2; } /* Facebook blue */
+.social-icons a:nth-child(2):hover { background: #1DA1F2; } /* Twitter blue */
+.social-icons a:nth-child(3):hover { background: #E4405F; } /* Instagram pink */
+.social-icons a:nth-child(4):hover { background: #0077B5; } /* LinkedIn blue */
+
+/* ============================================
+   10. SUB-HEADER (Internal Pages)
+   ============================================ */
+
+/* Sub-header banner for internal pages (About, Blog, Contact, etc.) */
+.sub-header {
+    width: 100%;
+    height: 50vh; /* Half viewport height */
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+                url(../assets/landing.png) no-repeat center/cover;
+    color: white;
+    position: relative;
+}
+
+/* Page title container */
+.sub-header-text {
+    position: absolute;
+    bottom: 30%; /* Positions title 30% from bottom */
+    width: 100%;
+    text-align: center;
+}
+
+/* Page title */
+.sub-header-text h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+/* ============================================
+   11. ABOUT PAGE
+   ============================================ */
+
+/* About page container */
+.about-us {
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* About page two-column layout */
+.about-us .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* About page columns */
+.about-col {
+    flex-basis: 48%; /* Each column takes 48% width */
+}
+
+/* About page image */
+.about-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* About page heading */
+.about-col h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+/* About page paragraph */
+.about-col p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Red button (used on About page) */
+.red-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #f44336;
+    border-radius: 5px;
+    background: transparent;
+    color: #f44336;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Red button hover effect */
+.red-btn:hover {
+    background: #f44336;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+}
+
+/* About info section */
+.about-info {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* About info heading */
+.about-info h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* About info paragraph */
+.about-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* ============================================
+   12. BLOG PAGE
+   ============================================ */
+
+/* Blog page container */
+.blog-content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Blog page two-column layout */
+.blog-content .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start; /* Aligns both columns to top */
+}
+
+/* Left column - main blog content */
+.blog-left {
+    flex-basis: 65%;
+}
+
+/* Blog featured image */
+.blog-left img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog post title */
+.blog-left h2 {
+    color: #222;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 20px 0 30px;
+    line-height: 1.3;
+}
+
+/* Blog post paragraphs */
+.blog-left p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify; /* Aligns text evenly on both sides */
+}
+
+/* Comment box container */
+.comment-box {
+    margin-top: 60px;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+/* Comment box heading */
+.comment-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Comment form inputs */
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: white;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Input focus effect */
+.comment-form input:focus,
+.comment-form textarea:focus {
+    border-color: #f44336;
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+}
+
+/* Textarea specific styling */
+.comment-form textarea {
+    resize: vertical; /* Only allows vertical resizing */
+    min-height: 120px;
+}
+
+/* Comment submit button */
+.comment-form .red-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #f44336;
+    color: white;
+    border: 2px solid #f44336;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Comment button hover */
+.comment-form .red-btn:hover {
+    background: transparent;
+    color: #f44336;
+}
+
+/* Right sidebar */
+.blog-right {
+    flex-basis: 32%;
+}
+
+/* Sidebar heading */
+.blog-right h3 {
+    background: #f44336;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Blog right sidebar - fix for nested divs */
+.blog-right > div {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Category items */
+.blog-right > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.blog-right > div > div:last-child {
+    border-bottom: none;
+}
+
+/* Category hover effect */
+.blog-right > div > div:hover {
+    background: #f9f9f9;
+    padding-left: 25px;
+}
+
+/* Category name */
+.blog-right > div > div span:first-child {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Category count badge */
+.blog-right > div > div span:last-child {
+    background: #f44336;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 35px;
+    text-align: center;
+}
+
+/* ============================================
+   13. CONTACT PAGE
+   ============================================ */
+
+/* Map section */
+.location {
+    width: 80%;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Google Maps iframe */
+.location iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section container */
+.contact-us {
+    width: 80%;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Contact page row */
+.contact-us .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Contact columns */
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+/* Contact info items (icon + text) */
+.contact-col div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+/* Contact icons */
+.contact-col div i {
+    font-size: 28px;
+    color: #f44336;
+    margin-top: 5px;
+}
+
+/* Text container */
+.contact-col div span {
+    flex: 1;
+}
+
+/* Contact heading */
+.contact-col h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Contact paragraph */
+.contact-col div p {
+    padding: 0;
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact form inputs */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* Contact form focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f44336;
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+}
+
+/* Contact textarea */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Contact submit button */
+.contact-form .red-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #f44336;
+    color: white;
+    border: 2px solid #f44336;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+
+/* Contact button hover */
+.contact-form .red-btn:hover {
+    background: transparent;
+    color: #f44336;
+}
+
+/* ============================================
+   14. RESPONSIVE MEDIA QUERIES
+   ALL RESPONSIVE CODE GOES HERE - ORGANIZED BY BREAKPOINT
+   ============================================ */
+
+/* ============================= */
+/* TABLET (max-width: 1024px) */
+/* ============================= */
+@media (max-width: 1024px) {
+    /* Hero text */
+    .hero-text h1 {
+        font-size: 60px;
+    }
+
+    /* Course cards - 2 per row */
+    .course-col {
+        flex-basis: 45%;
+    }
+
+    /* Facility items - 2 per row */
+    .facility-item {
+        flex-basis: 45%;
+    }
+
+    /* Review items - 2 per row */
+    .review-item {
+        flex-basis: 45%;
+    }
+
+    /* CTA section */
+    .cta {
+        padding: 80px 30px;
+    }
+
+    .cta h3 {
+        font-size: 28px;
+    }
+}
+
+/* ============================= */
+/* MOBILE (max-width: 768px) */
+/* THIS IS THE MOST IMPORTANT BREAKPOINT */
+/* ============================= */
+@media (max-width: 768px) {
+
+    /* ----- HEADER & NAVIGATION ----- */
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-name a {
+        font-size: 20px;
+    }
+
+    /* Hide navigation by default on mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Starts off-screen */
+        width: 70%;
+        height: 100vh;
+        background: rgba(4, 9, 30, 0.98);
+        padding: 80px 30px 30px;
+        z-index: 999;
+        transition: right 0.5s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Show navigation when toggled */
+    .nav-links.show {
+        display: flex;
+        right: 0; /* Slides in */
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* Show hamburger menu */
+    .menu-icon {
+        display: block;
+    }
+
+    /* ----- HERO SECTION ----- */
+    .container {
+        margin-bottom: 30px;
+    }
+
+    .hero-text {
+        padding: 0 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .btn-visit {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    /* ----- COURSE SECTION ----- */
+    .course {
+        width: 90%;
+        padding: 60px 15px;
+    }
+
+    .course h1 {
+        font-size: 32px;
+    }
+
+    .course-col {
+        flex-basis: 100%; /* 1 per row on mobile */
+    }
+
+    /* ----- CAMPUS SECTION ----- */
+    .campus {
+        width: 90%;
+        padding: 60px 15px;
+    }
+
+    .campus h1 {
+        font-size: 32px;
+    }
+
+    .campus-col {
+        flex-direction: column;
+    }
+
+    .campus-img {
+        flex-basis: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .campus-img:last-child {
+        margin-bottom: 0;
+    }
+
+    /* ----- FACILITY SECTION ----- */
+    .facility {
+        width: 90%;
+        padding: 60px 15px;
+    }
+
+    .facility-header {
+        font-size: 32px;
+    }
+
+    .facility-item {
+        flex-basis: 100%; /* 1 per row on mobile */
+    }
+
+    /* ----- REVIEW SECTION ----- */
+    .review {
+        width: 90%;
+        padding: 60px 15px;
+    }
+
+    .review h1 {
+        font-size: 32px;
+    }
+
+    .review-row {
+        flex-direction: column;
+    }
+
+    .review-item {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    /* ----- CTA SECTION ----- */
+    .cta {
+        width: 90%;
+        margin: 50px auto;
+        padding: 50px 20px;
+    }
+
+    .cta h3 {
+        font-size: 22px;
+    }
+
+    .cta-btn {
+        font-size: 15px;
+        padding: 12px 25px;
+    }
+
+    /* ----- FOOTER/ABOUT ----- */
+    .about {
+        width: 90%;
+        padding: 60px 15px;
+    }
+
+    .about h3 {
+        font-size: 32px;
+    }
+
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    /* ----- SUB-HEADER ----- */
+    .sub-header {
+        height: 40vh;
+    }
+
+    .sub-header-text h1 {
+        font-size: 28px;
+    }
+
+    /* ----- ABOUT PAGE ----- */
+    .about-us {
+        width: 90%;
+        padding: 60px 15px;
+    }
+
+    .about-us .row,
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col {
+        flex-basis: 100%;
+    }
+
+    /* ----- BLOG PAGE ----- */
+    .blog-content {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .blog-content .row {
+        flex-direction: column;
+    }
+
+    .blog-left,
+    .blog-right {
+        flex-basis: 100%;
+    }
+
+    .blog-left h2 {
+        font-size: 24px;
+    }
+
+    .comment-box {
+        padding: 25px;
+    }
+
+    .blog-right {
+        margin-top: 40px;
+    }
+
+    /* ----- CONTACT PAGE ----- */
+    .location {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .location iframe {
+        height: 300px;
+    }
+
+    .contact-us {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .contact-us .row {
+        flex-direction: column;
+    }
+
+    .contact-col {
+        flex-basis: 100%;
+    }
+}
+
+/* ============================= */
+/* SMALL MOBILE (max-width: 480px) */
+/* FOR VERY SMALL SCREENS */
+/* ============================= */
+@media (max-width: 480px) {
+    /* Hero */
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .btn-visit {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* All section headings */
+    .course h1,
+    .campus h1,
+    .facility-header,
+    .review h1,
+    .about h3 {
+        font-size: 26px;
+    }
+
+    .cta h3 {
+        font-size: 18px;
+    }
+
+    /* Logo */
+    .logo-img img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-name a {
+        font-size: 18px;
+    }
+
+    /* Navigation */
+    .nav-links {
+        width: 85%;
+    }
+
+    /* Social icons */
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* ============================= */
+/* LANDSCAPE MODE (phones turned sideways) */
+/* ============================= */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-text {
+        min-height: auto;
+        padding: 80px 20px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        min-height: 80vh;
+    }
+}
+
+/* ============================================
+   END OF STYLESHEET
+   ============================================ */
+
+   /* ============================================
+   DEGREE PAGE - FACULTY LISTING STYLES
+   ============================================ */
+
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+    width: 80%;
+    margin: 30px auto 0;
+    font-size: 13px;
+    color: #999;
+}
+
+.breadcrumb a {
+    color: #f44336;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Intro Section ---- */
+.degree-intro {
+    width: 80%;
+    margin: 70px auto 40px;
+    text-align: center;
+}
+
+.degree-intro h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+.degree-intro h1 span {
+    color: #f44336;
+}
+
+.degree-intro p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+/* ---- Stats Bar ---- */
+.degree-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f44336;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+/* ---- Faculty Filter Tabs ---- */
+.faculty-filter {
+    width: 80%;
+    margin: 50px auto 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 9px 22px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #f44336;
+    border-color: #f44336;
+    color: white;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* ---- Faculty Grid ---- */
+.faculty-section {
+    width: 80%;
+    margin: 0 auto 80px;
+}
+
+.faculty-section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f44336;
+    margin-bottom: 20px;
+}
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ---- Faculty Card ---- */
+.faculty-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+    transition: 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.faculty-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13);
+}
+
+/* Coloured accent bar at top */
+.faculty-card::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: var(--accent, #f44336);
+}
+
+/* Accent colours per faculty */
+.faculty-card.medical::before       { --accent: #e53935; }
+.faculty-card.science::before       { --accent: #1e88e5; }
+.faculty-card.arts::before          { --accent: #8e24aa; }
+.faculty-card.engineering::before   { --accent: #f57c00; }
+.faculty-card.management::before    { --accent: #00897b; }
+.faculty-card.social::before        { --accent: #3949ab; }
+.faculty-card.law::before           { --accent: #c0392b; }
+.faculty-card.education::before     { --accent: #43a047; }
+.faculty-card.pharmacy::before      { --accent: #00acc1; }
+.faculty-card.nursing::before       { --accent: #e91e63; }
+.faculty-card.agriculture::before   { --accent: #7cb342; }
+.faculty-card.environmental::before { --accent: #6d4c41; }
+
+/* ---- Card Body ---- */
+.faculty-card-body {
+    padding: 22px 24px 20px;
+}
+
+/* Faculty icon bubble */
+.faculty-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--icon-bg, #fff3f3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-size: 22px;
+    color: var(--accent, #f44336);
+}
+
+/* Icon colours per faculty */
+.faculty-card.medical       .faculty-icon { --icon-bg: #ffebee; }
+.faculty-card.science       .faculty-icon { --icon-bg: #e3f2fd; color: #1e88e5; }
+.faculty-card.arts          .faculty-icon { --icon-bg: #f3e5f5; color: #8e24aa; }
+.faculty-card.engineering   .faculty-icon { --icon-bg: #fff3e0; color: #f57c00; }
+.faculty-card.management    .faculty-icon { --icon-bg: #e0f2f1; color: #00897b; }
+.faculty-card.social        .faculty-icon { --icon-bg: #e8eaf6; color: #3949ab; }
+.faculty-card.law           .faculty-icon { --icon-bg: #fce4ec; color: #c0392b; }
+.faculty-card.education     .faculty-icon { --icon-bg: #e8f5e9; color: #43a047; }
+.faculty-card.pharmacy      .faculty-icon { --icon-bg: #e0f7fa; color: #00acc1; }
+.faculty-card.nursing       .faculty-icon { --icon-bg: #fce4ec; color: #e91e63; }
+.faculty-card.agriculture   .faculty-icon { --icon-bg: #f1f8e9; color: #7cb342; }
+.faculty-card.environmental .faculty-icon { --icon-bg: #efebe9; color: #6d4c41; }
+
+.faculty-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+/* Department list */
+.dept-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+}
+
+.dept-list li {
+    font-size: 13px;
+    color: #666;
+    padding: 5px 0;
+    border-bottom: 1px dashed #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dept-list li:last-child {
+    border-bottom: none;
+}
+
+.dept-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent, #f44336);
+    flex-shrink: 0;
+}
+
+/* ---- Card Footer ---- */
+.faculty-card-footer {
+    padding: 14px 24px;
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dept-count {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+}
+
+.apply-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent, #f44336);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.apply-link:hover {
+    gap: 10px;
+}
+
+/* ---- Bottom CTA Banner ---- */
+.degree-cta {
+    width: 80%;
+    margin: 0 auto 100px;
+    padding: 70px 50px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #f44336 100%);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.degree-cta h3 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.degree-cta p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.degree-cta .cta-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: white;
+    border: 2px solid white;
+    color: #f44336;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+.degree-cta .cta-btn:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.degree-cta .cta-btn.outline {
+    background: transparent;
+    color: white;
+}
+
+.degree-cta .cta-btn.outline:hover {
+    background: white;
+    color: #f44336;
+}
+
+/* ============================================
+   PRE-DEGREE PAGE - FACULTY LISTING STYLES
+   ============================================ */
+
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+    width: 80%;
+    margin: 30px auto 0;
+    font-size: 13px;
+    color: #999;
+}
+
+.breadcrumb a {
+    color: #f44336;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Intro Section ---- */
+.predegree-intro {
+    width: 80%;
+    margin: 70px auto 40px;
+    text-align: center;
+}
+
+.predegree-intro h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+.predegree-intro h1 span {
+    color: #f44336;
+}
+
+.predegree-intro p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+/* ---- Info Banner ---- */
+.predegree-banner {
+    width: 80%;
+    margin: 0 auto 50px;
+    background: #fff8f8;
+    border-left: 5px solid #f44336;
+    border-radius: 10px;
+    padding: 22px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.predegree-banner i {
+    font-size: 24px;
+    color: #f44336;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.predegree-banner p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.predegree-banner p strong {
+    color: #1a1a2e;
+}
+
+/* ---- Stats Bar ---- */
+.predegree-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f44336;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+/* ---- How to Apply Steps ---- */
+.how-to-apply {
+    width: 80%;
+    margin: 60px auto 20px;
+    text-align: center;
+}
+
+.how-to-apply h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.how-to-apply > p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.steps-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step-item {
+    flex: 1;
+    min-width: 160px;
+    position: relative;
+    text-align: center;
+}
+
+/* Connecting line between steps */
+.step-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    right: -10px;
+    width: 20px;
+    height: 2px;
+    background: #f44336;
+    opacity: 0.3;
+}
+
+.step-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f44336;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    box-shadow: 0 4px 14px rgba(244, 67, 54, 0.35);
+}
+
+.step-item h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.step-item p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* ---- Faculty Filter Tabs ---- */
+.faculty-filter {
+    width: 80%;
+    margin: 60px auto 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 9px 22px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #f44336;
+    border-color: #f44336;
+    color: white;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* ---- Faculty Grid ---- */
+.faculty-section {
+    width: 80%;
+    margin: 0 auto 80px;
+}
+
+.faculty-section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f44336;
+    margin-bottom: 20px;
+}
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ---- Faculty Card ---- */
+.faculty-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+    transition: 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.faculty-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13);
+}
+
+/* Coloured accent bar at top */
+.faculty-card::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: var(--accent, #f44336);
+}
+
+/* Accent colours per faculty */
+.faculty-card.medical::before       { --accent: #e53935; }
+.faculty-card.science::before       { --accent: #1e88e5; }
+.faculty-card.arts::before          { --accent: #8e24aa; }
+.faculty-card.engineering::before   { --accent: #f57c00; }
+.faculty-card.management::before    { --accent: #00897b; }
+.faculty-card.social::before        { --accent: #3949ab; }
+.faculty-card.law::before           { --accent: #c0392b; }
+.faculty-card.education::before     { --accent: #43a047; }
+.faculty-card.environmental::before { --accent: #6d4c41; }
+.faculty-card.agriculture::before   { --accent: #7cb342; }
+
+/* ---- Card Body ---- */
+.faculty-card-body {
+    padding: 22px 24px 20px;
+}
+
+/* Faculty icon bubble */
+.faculty-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--icon-bg, #fff3f3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-size: 22px;
+    color: var(--accent, #f44336);
+}
+
+/* Icon colours per faculty */
+.faculty-card.medical       .faculty-icon { --icon-bg: #ffebee; }
+.faculty-card.science       .faculty-icon { --icon-bg: #e3f2fd; color: #1e88e5; }
+.faculty-card.arts          .faculty-icon { --icon-bg: #f3e5f5; color: #8e24aa; }
+.faculty-card.engineering   .faculty-icon { --icon-bg: #fff3e0; color: #f57c00; }
+.faculty-card.management    .faculty-icon { --icon-bg: #e0f2f1; color: #00897b; }
+.faculty-card.social        .faculty-icon { --icon-bg: #e8eaf6; color: #3949ab; }
+.faculty-card.law           .faculty-icon { --icon-bg: #fce4ec; color: #c0392b; }
+.faculty-card.education     .faculty-icon { --icon-bg: #e8f5e9; color: #43a047; }
+.faculty-card.environmental .faculty-icon { --icon-bg: #efebe9; color: #6d4c41; }
+.faculty-card.agriculture   .faculty-icon { --icon-bg: #f1f8e9; color: #7cb342; }
+
+.faculty-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+/* Department list */
+.dept-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+}
+
+.dept-list li {
+    font-size: 13px;
+    color: #666;
+    padding: 5px 0;
+    border-bottom: 1px dashed #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dept-list li:last-child {
+    border-bottom: none;
+}
+
+.dept-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent, #f44336);
+    flex-shrink: 0;
+}
+
+/* ---- Card Footer ---- */
+.faculty-card-footer {
+    padding: 14px 24px;
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dept-count {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+}
+
+.apply-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent, #f44336);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.apply-link:hover {
+    gap: 10px;
+}
+
+/* ---- Requirements Section ---- */
+.requirements {
+    width: 80%;
+    margin: 0 auto 80px;
+}
+
+.requirements h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.req-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.req-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.req-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+.req-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 24px;
+    color: #f44336;
+}
+
+.req-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.req-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* ---- Bottom CTA Banner ---- */
+.predegree-cta {
+    width: 80%;
+    margin: 0 auto 100px;
+    padding: 70px 50px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #f44336 100%);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.predegree-cta h3 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.predegree-cta p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.predegree-cta .cta-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: white;
+    border: 2px solid white;
+    color: #f44336;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+.predegree-cta .cta-btn:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.predegree-cta .cta-btn.outline {
+    background: transparent;
+    color: white;
+}
+
+.predegree-cta .cta-btn.outline:hover {
+    background: white;
+    color: #f44336;
+}
+
+/* ============================================
+   POST-DEGREE PAGE - POSTGRADUATE STYLES
+   ============================================ */
+
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+    width: 80%;
+    margin: 30px auto 0;
+    font-size: 13px;
+    color: #999;
+}
+
+.breadcrumb a {
+    color: #f44336;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Intro Section ---- */
+.postdegree-intro {
+    width: 80%;
+    margin: 70px auto 40px;
+    text-align: center;
+}
+
+.postdegree-intro h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+.postdegree-intro h1 span {
+    color: #f44336;
+}
+
+.postdegree-intro p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+/* ---- Stats Bar ---- */
+.postdegree-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f44336;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+/* ---- Info Banner ---- */
+.postdegree-banner {
+    width: 80%;
+    margin: 0 auto 50px;
+    background: #fff8f8;
+    border-left: 5px solid #f44336;
+    border-radius: 10px;
+    padding: 22px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.postdegree-banner i {
+    font-size: 24px;
+    color: #f44336;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.postdegree-banner p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.postdegree-banner p strong {
+    color: #1a1a2e;
+}
+
+/* ---- Degree Type Cards ---- */
+.degree-types {
+    width: 80%;
+    margin: 60px auto 20px;
+    text-align: center;
+}
+
+.degree-types h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.degree-types > p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.degree-type-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.degree-type-card {
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.degree-type-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    border-color: #f44336;
+}
+
+.degree-type-card .type-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 24px;
+    color: #f44336;
+    transition: 0.3s;
+}
+
+.degree-type-card:hover .type-icon {
+    background: #f44336;
+    color: white;
+}
+
+.degree-type-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.degree-type-card p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* ---- Faculty Filter Tabs ---- */
+.faculty-filter {
+    width: 80%;
+    margin: 60px auto 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 9px 22px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #f44336;
+    border-color: #f44336;
+    color: white;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* ---- Faculty Grid ---- */
+.faculty-section {
+    width: 80%;
+    margin: 0 auto 80px;
+}
+
+.faculty-section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f44336;
+    margin-bottom: 20px;
+}
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ---- Faculty Card ---- */
+.faculty-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+    transition: 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.faculty-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13);
+}
+
+.faculty-card::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: var(--accent, #f44336);
+}
+
+/* Accent colours per faculty */
+.faculty-card.medical::before       { --accent: #e53935; }
+.faculty-card.science::before       { --accent: #1e88e5; }
+.faculty-card.arts::before          { --accent: #8e24aa; }
+.faculty-card.engineering::before   { --accent: #f57c00; }
+.faculty-card.management::before    { --accent: #00897b; }
+.faculty-card.social::before        { --accent: #3949ab; }
+.faculty-card.law::before           { --accent: #c0392b; }
+.faculty-card.education::before     { --accent: #43a047; }
+.faculty-card.agriculture::before   { --accent: #7cb342; }
+.faculty-card.environmental::before { --accent: #6d4c41; }
+
+/* ---- Card Body ---- */
+.faculty-card-body {
+    padding: 22px 24px 20px;
+}
+
+.faculty-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--icon-bg, #fff3f3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-size: 22px;
+    color: var(--accent, #f44336);
+}
+
+/* Icon colours per faculty */
+.faculty-card.medical       .faculty-icon { --icon-bg: #ffebee; }
+.faculty-card.science       .faculty-icon { --icon-bg: #e3f2fd; color: #1e88e5; }
+.faculty-card.arts          .faculty-icon { --icon-bg: #f3e5f5; color: #8e24aa; }
+.faculty-card.engineering   .faculty-icon { --icon-bg: #fff3e0; color: #f57c00; }
+.faculty-card.management    .faculty-icon { --icon-bg: #e0f2f1; color: #00897b; }
+.faculty-card.social        .faculty-icon { --icon-bg: #e8eaf6; color: #3949ab; }
+.faculty-card.law           .faculty-icon { --icon-bg: #fce4ec; color: #c0392b; }
+.faculty-card.education     .faculty-icon { --icon-bg: #e8f5e9; color: #43a047; }
+.faculty-card.agriculture   .faculty-icon { --icon-bg: #f1f8e9; color: #7cb342; }
+.faculty-card.environmental .faculty-icon { --icon-bg: #efebe9; color: #6d4c41; }
+
+.faculty-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+/* Programme badges */
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.badge.pgd   { color: #f57c00; border-color: #f57c00; background: #fff8f0; }
+.badge.msc   { color: #1e88e5; border-color: #1e88e5; background: #f0f6ff; }
+.badge.mba   { color: #00897b; border-color: #00897b; background: #f0faf9; }
+.badge.mpa   { color: #8e24aa; border-color: #8e24aa; background: #faf0ff; }
+.badge.llm   { color: #c0392b; border-color: #c0392b; background: #fff0f0; }
+.badge.med   { color: #43a047; border-color: #43a047; background: #f0faf0; }
+.badge.mphil { color: #3949ab; border-color: #3949ab; background: #f0f1ff; }
+.badge.phd   { color: #e53935; border-color: #e53935; background: #fff0f0; }
+.badge.ma    { color: #6d4c41; border-color: #6d4c41; background: #f5f0ee; }
+
+/* Department list */
+.dept-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+}
+
+.dept-list li {
+    font-size: 13px;
+    color: #666;
+    padding: 5px 0;
+    border-bottom: 1px dashed #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dept-list li:last-child {
+    border-bottom: none;
+}
+
+.dept-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent, #f44336);
+    flex-shrink: 0;
+}
+
+/* ---- Card Footer ---- */
+.faculty-card-footer {
+    padding: 14px 24px;
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dept-count {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+}
+
+.apply-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent, #f44336);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.apply-link:hover {
+    gap: 10px;
+}
+
+/* ---- Admission Requirements ---- */
+.requirements {
+    width: 80%;
+    margin: 0 auto 80px;
+}
+
+.requirements h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.req-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.req-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.req-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+.req-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 24px;
+    color: #f44336;
+}
+
+.req-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.req-card p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* ---- Bottom CTA Banner ---- */
+.postdegree-cta {
+    width: 80%;
+    margin: 0 auto 100px;
+    padding: 70px 50px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #f44336 100%);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.postdegree-cta h3 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.postdegree-cta p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.postdegree-cta .cta-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: white;
+    border: 2px solid white;
+    color: #f44336;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+.postdegree-cta .cta-btn:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.postdegree-cta .cta-btn.outline {
+    background: transparent;
+    color: white;
+}
+
+.postdegree-cta .cta-btn.outline:hover {
+    background: white;
+    color: #f44336;
+}
+
+/* ---- Fade-in Animation ---- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .faculty-grid     { grid-template-columns:          repeat(2, 1fr); }
+    .req-grid         { grid-template-columns: repeat(2, 1fr); }
+    .postdegree-stats { gap: 30px; }
+    .degree-type-row  { gap: 16px; }
+}
+
+@media (max-width: 768px) {
+    .postdegree-intro    { width: 90%; }
+    .postdegree-intro h1 { font-size: 30px; }
+    .postdegree-banner   { width: 90%; flex-direction: column; }
+    .postdegree-stats    { flex-wrap: wrap; gap: 20px; }
+    .stat-item           { flex-basis: 40%; }
+    .degree-types        { width: 90%; }
+    .degree-type-row     { flex-direction: column; align-items: center; }
+    .degree-type-card    { max-width: 100%; width: 100%; }
+    .faculty-filter      { width: 90%; }
+    .faculty-section     { width: 90%; }
+    .faculty-grid        { grid-template-columns: 1fr; }
+    .requirements        { width: 90%; }
+    .req-grid            { grid-template-columns: 1fr; }
+    .postdegree-cta      { width: 90%; padding: 50px 25px; }
+    .postdegree-cta h3   { font-size: 24px; }
+    .breadcrumb          { width: 90%; }
+}
+
+
+
+/* ---- Fade-in Animation ---- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .faculty-grid        { grid-template-columns: repeat(2, 1fr); }
+    .req-grid            { grid-template-columns: repeat(2, 1fr); }
+    .predegree-stats     { gap: 30px; }
+    .steps-row           { gap: 15px; }
+}
+
+@media (max-width: 768px) {
+    .predegree-intro     { width: 90%; }
+    .predegree-intro h1  { font-size: 30px; }
+    .predegree-banner    { width: 90%; flex-direction: column; }
+    .predegree-stats     { flex-wrap: wrap; gap: 20px; }
+    .stat-item           { flex-basis: 40%; }
+    .how-to-apply        { width: 90%; }
+    .steps-row           { flex-direction: column; align-items: center; }
+    .step-item           { min-width: 100%; }
+    .step-item::after    { display: none; }
+    .faculty-filter      { width: 90%; }
+    .faculty-section     { width: 90%; }
+    .faculty-grid        { grid-template-columns: 1fr; }
+    .requirements        { width: 90%; }
+    .req-grid            { grid-template-columns: 1fr; }
+    .predegree-cta       { width: 90%; padding: 50px 25px; }
+    .predegree-cta h3    { font-size: 24px; }
+    .breadcrumb          { width: 90%; }
+}
+
+/* ---- Fade-in Animation ---- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .faculty-grid  { grid-template-columns: repeat(2, 1fr); }
+    .degree-stats  { gap: 30px; }
+}
+
+@media (max-width: 768px) {
+    .degree-intro  { width: 90%; }
+    .degree-intro h1 { font-size: 30px; }
+    .faculty-filter { width: 90%; }
+    .faculty-section { width: 90%; }
+    .faculty-grid  { grid-template-columns: 1fr; }
+    .degree-stats  { flex-wrap: wrap; gap: 20px; }
+    .stat-item     { flex-basis: 40%; }
+    .degree-cta    { width: 90%; padding: 50px 25px; }
+    .degree-cta h3 { font-size: 24px; }
+    .breadcrumb    { width: 90%; }
+}
