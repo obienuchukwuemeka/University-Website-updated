@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postgraduate Programmes - StanEdu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/postdegree.css">
+</head>
+<body>
+
+    <!-- Sub Header -->
+    <div class="sub-header">
+        <header>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="Logo">
+                </div>
+                <div class="logo-name">
+                    <a href="index.html">StanEdu</a>
+                </div>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="course.html" class="active">Courses</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <i class="fa-solid fa-bars menu-icon" id="menuIcon"></i>
+        </header>
+
+        <div class="sub-header-text">
+            <h1>Postgraduate Programmes</h1>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp;›&nbsp;
+        <a href="course.html">Courses</a> &nbsp;›&nbsp;
+        Postgraduate Programmes
+    </div>
+
+    <!-- Intro -->
+    <div class="postdegree-intro">
+        <h1>Advance Your Career with a <span>Postgraduate Degree</span></h1>
+        <p>Our postgraduate school was established to develop a culture of research and train high-calibre academic and professional personnel. We offer PGD, Masters, M.Phil and PhD programmes across a wide range of disciplines, available full-time and part-time.</p>
+
+        <div class="postdegree-stats">
+            <div class="stat-item">
+                <h3>4</h3>
+                <p>Award Types</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Faculties</p>
+            </div>
+            <div class="stat-item">
+                <h3>Full & Part</h3>
+                <p>Time Options</p>
+            </div>
+            <div class="stat-item">
+                <h3>₦30,000</h3>
+                <p>Application Fee</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Banner -->
+    <div class="postdegree-banner">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>
+            <strong>Established 2008:</strong> The Postgraduate School was established by Senate on May 8, 2008. All programmes are accredited and lead to internationally recognised awards. Applications are submitted online at <strong>postgraduate.nduportal.com</strong> and fees are paid via <strong>ndufees.com</strong>.
+        </p>
+    </div>
+
+    <!-- Degree Types -->
+    <div class="degree-types">
+        <h2>Programmes We Offer</h2>
+        <p>Choose the level of study that suits your academic and career goals</p>
+
+        <div class="degree-type-row">
+
+            <div class="degree-type-card">
+                <div class="type-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4>PGD</h4>
+                <p>Postgraduate Diploma — 1 year bridging programme</p>
+            </div>
+
+            <div class="degree-type-card">
+                <div class="type-icon"><i class="fa-solid fa-book-open"></i></div>
+                <h4>Masters</h4>
+                <p>MA / MSc / MBA / MPA / M.Ed / LLM — 1 to 2 years</p>
+            </div>
+
+            <div class="degree-type-card">
+                <div class="type-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <h4>M.Phil</h4>
+                <p>Master of Philosophy — Research focused, 2 years minimum</p>
+            </div>
+
+            <div class="degree-type-card">
+                <div class="type-icon"><i class="fa-solid fa-flask"></i></div>
+                <h4>Ph.D</h4>
+                <p>Doctor of Philosophy — The highest academic award, 3+ years</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="faculty-filter">
+        <button class="filter-btn active" data-group="all">All Faculties</button>
+        <button class="filter-btn" data-group="health">Health Sciences</button>
+        <button class="filter-btn" data-group="science">Sciences</button>
+        <button class="filter-btn" data-group="humanities">Humanities</button>
+        <button class="filter-btn" data-group="management">Management</button>
+        <button class="filter-btn" data-group="engineering">Engineering</button>
+    </div>
+
+    <!-- Faculty Cards -->
+    <div class="faculty-section">
+        <h2>Faculties &amp; Available Programmes</h2>
+
+        <div class="faculty-grid" id="facultyGrid">
+
+            <!-- 1. Basic Medical Sciences -->
+            <div class="faculty-card medical" data-group="health">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Faculty of Basic Medical Sciences</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge msc">MSc</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Biochemistry</li>
+                        <li>Anatomy</li>
+                        <li>Physiology</li>
+                        <li>Medical Laboratory Science</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 2. Clinical Sciences -->
+            <div class="faculty-card medical" data-group="health">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Faculty of Clinical Sciences</h3>
+                    <div class="badge-row">
+                        <span class="badge msc">MSc</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Medicine & Surgery</li>
+                        <li>Paediatrics</li>
+                        <li>Obstetrics & Gynaecology</li>
+                        <li>Surgery</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 3. Agriculture -->
+            <div class="faculty-card agriculture" data-group="science">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Faculty of Agriculture</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge msc">MSc</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Agricultural Economics</li>
+                        <li>Crop & Soil Science</li>
+                        <li>Animal Science</li>
+                        <li>Fisheries & Aquatic Studies</li>
+                        <li>Extension & Rural Sociology</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 4. Science -->
+            <div class="faculty-card science" data-group="science">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Faculty of Science</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge msc">MSc</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Biological Sciences</li>
+                        <li>Microbiology</li>
+                        <li>Pure & Applied Chemistry</li>
+                        <li>Mathematics / Computer Science</li>
+                        <li>Geology</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 5. Engineering -->
+            <div class="faculty-card engineering" data-group="engineering">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-gear"></i></div>
+                    <h3>Faculty of Engineering</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge msc">MSc</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Electrical / Electronics Engineering</li>
+                        <li>Civil Engineering / Hydrology</li>
+                        <li>Mechanical / Marine Engineering</li>
+                        <li>Chemical Engineering</li>
+                        <li>Petroleum Engineering</li>
+                        <li>Agricultural / Environmental Engineering</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 6. Management Sciences -->
+            <div class="faculty-card management" data-group="management">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Faculty of Management Sciences</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge mba">MBA</span>
+                        <span class="badge mpa">MPA</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Accounting</li>
+                        <li>Banking & Finance</li>
+                        <li>Business Administration</li>
+                        <li>Marketing</li>
+                        <li>Insurance</li>
+                        <li>Office Information Management</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">6 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 7. Social Sciences -->
+            <div class="faculty-card social" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Faculty of Social Sciences</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge msc">MSc</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Economics</li>
+                        <li>Political Science</li>
+                        <li>Sociology</li>
+                        <li>Mass Communication</li>
+                        <li>Geography / Environmental Management</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 8. Arts -->
+            <div class="faculty-card arts" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+                    <h3>Faculty of Arts</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge ma">MA</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>English & Literary Studies</li>
+                        <li>History & Diplomacy</li>
+                        <li>Theatre Arts</li>
+                        <li>Philosophy</li>
+                        <li>Religious Studies</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 9. Education -->
+            <div class="faculty-card education" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Faculty of Education</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge med">M.Ed</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Educational Foundations</li>
+                        <li>Curriculum & Instruction</li>
+                        <li>Vocational Education</li>
+                        <li>Guidance & Counselling</li>
+                        <li>Library & Information Science</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">5 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 10. Law -->
+            <div class="faculty-card law" data-group="humanities">
+                <div class="faculty-card-body">
+                    <div class="faculty-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Faculty of Law</h3>
+                    <div class="badge-row">
+                        <span class="badge pgd">PGD</span>
+                        <span class="badge llm">LLM</span>
+                        <span class="badge mphil">M.Phil</span>
+                        <span class="badge phd">Ph.D</span>
+                    </div>
+                    <ul class="dept-list">
+                        <li>Private & Property Law</li>
+                        <li>Public & International Law</li>
+                        <li>Commercial & Industrial Law</li>
+                        <li>Islamic Law</li>
+                    </ul>
+                </div>
+                <div class="faculty-card-footer">
+                    <span class="dept-count">4 Departments</span>
+                    <a href="#" class="apply-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div><!-- /faculty-grid -->
+    </div><!-- /faculty-section -->
+
+    <!-- Admission Requirements -->
+    <div class="requirements">
+        <h2>Admission Requirements</h2>
+        <div class="req-grid">
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <h4>First Degree</h4>
+                <p>A relevant Bachelor's degree with at least Second Class Lower (2:2) or CGPA of 3.50 on a 5-point scale from a recognised university</p>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <h4>Academic Transcripts</h4>
+                <p>Official certified transcripts of all previous academic qualifications sent directly from the awarding institution</p>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                <h4>Reference Letters</h4>
+                <p>Two academic reference letters from qualified university lecturers or professionals in your field of study</p>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+                <h4>Application Fee</h4>
+                <p>Non-refundable fee of ₦30,000 paid via ndufees.com before completing the online form at postgraduate.nduportal.com</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="postdegree-cta">
+        <h3>Take Your Academic Career Further</h3>
+        <p>Join our growing community of postgraduate scholars and researchers. Applications are open for full-time and part-time programmes.</p>
+        <a href="#" class="cta-btn">Apply for Admission</a>
+        <a href="contact.html" class="cta-btn outline">Contact Admissions</a>
+    </div>
+
+    <script src="js/postdegree.js"></script>
+</body>
+</html>
