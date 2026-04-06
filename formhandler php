@@ -1,0 +1,32 @@
+<?php 
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+
+$email_form = 'chukwuemekaobienu@gmail.com';
+
+$email_subject = 'New Form Submission';
+
+$email_body = "User Name : $name.\n".
+
+$email_body = "User Name: $name. \n"
+;               "User Email: $visitor_email.\n".
+                    "Subject: $message .\n".
+"".                 "User Message: $message .\n";
+
+$to = 'chukwuemekaobienuobienu@gmail.com';
+
+$headers = "From: $email_from \r\n";
+
+$headers .= "Reply-To: $visitor_email \r\n";
+
+mail($to,$email_subject,$email_body,$headers);
+
+header("Location: contact.html");
+
+?>
+
+
+<!-- explain this code to me like its my first time writing php teach me the syntax and why every thing was done the way it was done -->
+ 
